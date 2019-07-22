@@ -6,10 +6,8 @@ module.exports = function (wallaby) {
     },
     tests: ['src/tests/**/*.test.js'],
     files: ['src/**/*.js', '!**/*.test.js', '!**/.*'],
+    compilers: {
+      '**/*.js': wallaby.compilers.babel(),
+    },
   };
 };
-compilers: {
-  '**/*.js'
-:
-  wallaby.compilers.babel(),
-}
